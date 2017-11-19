@@ -1,0 +1,11 @@
+{
+    "name": "soydetemporada/server",
+    "description": "Backend operations for http://soydetemporada.es",
+    "type": "project",
+    "require": {
+        "torophp/torophp": "dev-master",
+        "phpmailer/phpmailer": "dev-master"
+    },
+    "license": "Apache 2.0",
+    "minimum-stability": "dev"
+}
