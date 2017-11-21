@@ -26,6 +26,7 @@ class MailHandler {
           'name' => $name,
           'email'=>$email,
           'message'=>$message,
+          'subject'=>$subject,
           'base_url'=>$CONFIG->base_url
           )
         );
