@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcf49f9179f494af5321abe3439324fe",
+    "content-hash": "83528ca30d5d67eb5ad6f0dbd0ae9760",
     "packages": [
         {
             "name": "phpmailer/phpmailer",
-            "version": "dev-master",
+            "version": "v6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "dd2b4bc5fb4a988ca080b5613903d04c88d410c1"
+                "reference": "992392437c2e2784e0dc41446024fe411d293c96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/dd2b4bc5fb4a988ca080b5613903d04c88d410c1",
-                "reference": "dd2b4bc5fb4a988ca080b5613903d04c88d410c1",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/992392437c2e2784e0dc41446024fe411d293c96",
+                "reference": "992392437c2e2784e0dc41446024fe411d293c96",
                 "shasum": ""
             },
             "require": {
@@ -69,7 +69,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-11-17T11:24:17+00:00"
+            "time": "2017-09-14T16:47:12+00:00"
         },
         {
             "name": "torophp/torophp",
@@ -144,15 +144,14 @@
                 "php",
                 "router"
             ],
-            "time": "2015-04-15T21:01:31+00:00"
+            "time": "2015-04-15 21:01:31"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
-        "torophp/torophp": 20,
-        "phpmailer/phpmailer": 20
+        "torophp/torophp": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -1,4 +1,5 @@
 <?php
+namespace Handlers;
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -6,10 +7,10 @@ use PHPMailer\PHPMailer\Exception;
 class MailHandler {
 
   function post(){
-    $to = 'equipo@soydetemporada.es';
-    $to = 'lowfill@gmail.com';
+    global $CONFIG;
+
     $name = $_POST['name'];
-    $email = $_POST['email'];
+    $email = $_POST['_replyto'];
     $message = $_POST['message'];
     if(!empty($name) && !empty($email) && !empty($message)){
       $subject = "[Soy de Temporada] Hemos recibido un nuevo comentario de $name";
@@ -19,7 +20,7 @@ class MailHandler {
       try{
         //Recipients
         $mail->setFrom('contacto@soydetemporada.es', '[Soy de Temporada]');
-        $mail->addAddress($to);
+        $mail->addAddress($CONFIG->contact_email);
 
         //Content
         $mail->isHTML(true);
@@ -27,11 +28,14 @@ class MailHandler {
         $mail->Body    = $body;
         $mail->AltBody = $body;
 
+        error_log("{$CONFIG->contact_email} $subject $body");
         $mail->send();
+        header("Location: {$CONFIG->contact_form}#success");
       }
       catch(Exception $e){
-        echo 'Message could not be sent.';
-        echo 'Mailer Error: ' . $mail->ErrorInfo;
+        header("Location: {$CONFIG->contact_form}#error");
+        error_log('Message could not be sent.');
+        error_log('Mailer Error: ' . $mail->ErrorInfo);
       }
     }
   }
