@@ -13,12 +13,13 @@ class MailHandler {
     $email = $_POST['_replyto'];
     $message = $_POST['message'];
     if(!empty($name) && !empty($email) && !empty($message)){
-      $subject = "[Soy de Temporada] Hemos recibido un nuevo comentario de $name";
+      $subject = "[Soy de Temporada] Hemos recibido un nuevo comentario de $name [$email]";
       $mail = new PHPMailer(true);
       try{
         //Recipients
         $mail->setFrom('contacto@soydetemporada.es', '[Soy de Temporada]');
         $mail->addAddress($CONFIG->contact_email);
+        $mail->addReplyTo($email,$name);
 
         //Content
         $m = new \Mustache_Engine;
