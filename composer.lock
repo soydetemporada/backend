@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "e4a9b91d7891e6f997e1ea6288efb1ef",
     "packages": [
         {
             "name": "mustache/mustache",
-            "version": "v2.12.0",
+            "version": "v2.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/mustache.php.git",
-                "reference": "fe8fe72e9d580591854de404cc59a1b83ca4d19e"
+                "reference": "e95c5a008c23d3151d59ea72484d4f72049ab7f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/fe8fe72e9d580591854de404cc59a1b83ca4d19e",
-                "reference": "fe8fe72e9d580591854de404cc59a1b83ca4d19e",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/e95c5a008c23d3151d59ea72484d4f72049ab7f4",
+                "reference": "e95c5a008c23d3151d59ea72484d4f72049ab7f4",
                 "shasum": ""
             },
             "require": {
@@ -50,34 +50,31 @@
                 "mustache",
                 "templating"
             ],
-            "time": "2017-07-11T12:54:05+00:00"
+            "time": "2019-11-23T21:40:31+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.0.1",
+            "version": "v6.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "992392437c2e2784e0dc41446024fe411d293c96"
+                "reference": "a8bf068f64a580302026e484ee29511f661b2ad3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/992392437c2e2784e0dc41446024fe411d293c96",
-                "reference": "992392437c2e2784e0dc41446024fe411d293c96",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a8bf068f64a580302026e484ee29511f661b2ad3",
+                "reference": "a8bf068f64a580302026e484ee29511f661b2ad3",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
+                "ext-filter": "*",
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "doctrine/annotations": "1.2.*",
+                "doctrine/annotations": "^1.2",
                 "friendsofphp/php-cs-fixer": "^2.2",
-                "phpdocumentor/phpdocumentor": "2.*",
-                "phpunit/phpunit": "^4.8 || ^5.7",
-                "zendframework/zend-eventmanager": "3.0.*",
-                "zendframework/zend-i18n": "2.7.3",
-                "zendframework/zend-serializer": "2.7.*"
+                "phpunit/phpunit": "^4.8 || ^5.7"
             },
             "suggest": {
                 "ext-mbstring": "Needed to send email in multibyte encoding charset",
@@ -95,16 +92,16 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-2.1"
+                "LGPL-2.1-only"
             ],
             "authors": [
                 {
-                    "name": "Jim Jagielski",
-                    "email": "jimjag@gmail.com"
-                },
-                {
                     "name": "Marcus Bointon",
                     "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
                 },
                 {
                     "name": "Andy Prevost",
@@ -115,7 +112,21 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-09-14T16:47:12+00:00"
+            "funding": [
+                {
+                    "url": "https://marcus.bointon.com/donations/",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Synchro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/marcusbointon",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-03-14T14:23:48+00:00"
         },
         {
             "name": "torophp/torophp",
@@ -190,7 +201,7 @@
                 "php",
                 "router"
             ],
-            "time": "2015-04-15 21:01:31"
+            "time": "2015-04-15T21:01:31+00:00"
         }
     ],
     "packages-dev": [],
@@ -202,5 +213,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
